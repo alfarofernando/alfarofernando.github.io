@@ -1,0 +1,98 @@
+#Inicio {
+    background-image: url('assets/bg-inicio.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.txt-colour{
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+}
+
+
+.justify-text {
+    text-align: justify;
+}
+
+.accordion-header button {
+    font-size: 1.25rem;
+}
+
+.bg-estudios {
+    background-color: #dee2e6;
+}
+
+.redes-sociales-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999
+}
+
+.redes-sociales {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+    font-size: 1.5rem;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.redes-sociales a {
+    text-decoration: none;
+}
+
+.redes-sociales a:hover {
+    transform: scale(2);
+    transition: transform 1s ease;
+}
+
+.rs-r {
+    color: red;
+}
+
+.rs-b {
+    color: blue;
+}
+
+.carousel-item {
+    transition: transform 4s;
+    transform: translateX(-100%);
+
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideToRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#carouselTechnologies1 .carousel-item {
+    animation: slideFromLeft 4s ease-in;
+}
+
+#carouselTechnologies2 .carousel-item {
+    animation: slideToRight 4s ease-in;
+}
