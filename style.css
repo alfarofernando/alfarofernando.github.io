@@ -2,16 +2,14 @@
     background-image: url('assets/bg-inicio.jpg');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-
-.txt-colour{
+.txt-colour {
     color: white;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     font-weight: 400;
@@ -70,29 +68,66 @@
 }
 
 @keyframes slideFromLeft {
-    from {
+    0% {
         transform: translateX(-100%);
+        opacity: 3;
     }
 
-    to {
+    100% {
         transform: translateX(100%);
+        opacity: 0;
     }
 }
 
 @keyframes slideToRight {
-    from {
-        transform: translateX(100%);
+    0% {
+        transform: translateX(100);
+        opacity: 3;
     }
 
-    to {
-        transform: translateX(-100%);
+    100% {
+        transform: translateX(-100);
+        opacity: 0;
     }
 }
 
 #carouselTechnologies1 .carousel-item {
-    animation: slideFromLeft 4s ease-in;
+    animation: slideFromLeft 2.5s ease-in;
 }
 
 #carouselTechnologies2 .carousel-item {
-    animation: slideToRight 4s ease-in;
+    animation: slideToRight 2.5s ease-in;
+}
+
+.glow-div {
+    animation: glow-animation 3s ease-in-out infinite alternate;
+}
+
+#fraseCarousel {
+    font-stretch: expanded;
+    font-weight: 500;    
+}
+
+@keyframes glow-animation {
+    from {
+        box-shadow: 0 0 10px #00c3ff, 0 0 20px #00c3ff, 0 0 30px #00c3ff, 0 0 40px #00c3ff, 0 0 50px #00c3ff, 0 0 60px #00c3ff, 0 0 70px #00c3ff;
+    }
+
+    to {
+        box-shadow: none;
+    }
+}
+
+.dropdown-menu {
+    background-color: #343a40; 
+}
+
+.dropdown-item {
+    color: #f8f9fa !important; 
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f8f9fa; 
+    color: #343a40 !important; 
 }
